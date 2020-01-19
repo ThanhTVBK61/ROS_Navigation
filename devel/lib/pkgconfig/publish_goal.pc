@@ -1,0 +1,8 @@
+prefix=/home/tranthanh/cafebot_ws/devel
+
+Name: publish_goal
+Description: Description of publish_goal
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/tranthanh/cafebot_ws/devel/lib 
+Requires: 

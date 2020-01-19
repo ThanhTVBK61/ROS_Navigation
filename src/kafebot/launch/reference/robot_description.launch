@@ -1,0 +1,11 @@
+<launch>
+	<param name="robot_description" command="$(find xacro)/xacro.py $(find hoangham_simulation)/robots/hoangham.urdf.xacro" />
+	<param name="use_gui" value="true"/>
+	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+		<rosparam param="source_list">["rviz_command"]</rosparam>
+		<rosparam param="rate">20</rosparam>
+	</node>
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find hoangham_simulation)/hoang.rviz" required="true" />
+	<node pkg="hoangham_controller" type="rviz_manager.py" name="rviz_manager" respawn="true"/>
+</launch>

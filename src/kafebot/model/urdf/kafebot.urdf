@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<robot name="kafebot">
+  <link name="base_footprint">
+  </link>
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://kafebot/model/mesh/Frame.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://kafebot/model/mesh/Frame.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </collision>
+  </link>
+  
+  <link name="kinect">
+    <visual>
+      <geometry>
+        <mesh filename="package://kafebot/model/mesh/Kinect.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://kafebot/model/mesh/Kinect.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </collision>
+  </link>
+  
+  <link name="camera_rgb_optical_frame">
+  </link>
+
+  <link name="IMU">
+    <visual>
+      <geometry>
+        <mesh filename="package://kafebot/model/mesh/IMU.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://kafebot/model/mesh/IMU.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </collision>
+  </link>
+
+  <link name="L_wheel">
+    <visual>
+      <geometry>
+        <mesh filename="package://kafebot/model/mesh/L_wheel.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://kafebot/model/mesh/L_wheel.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </collision>
+  </link>
+
+  <link name="R_wheel">
+    <visual>
+      <geometry>
+        <mesh filename="package://kafebot/model/mesh/R_wheel.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://kafebot/model/mesh/R_wheel.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </collision>
+  </link>
+
+  <joint name="base_footprint_base_link_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+  
+  <joint name="Frame_R_wheel_joint" type="continuous">
+    <axis xyz="0 1 0"/>
+    <parent link="base_link"/>
+    <child link="R_wheel"/>
+    <origin xyz="0 0 0.0315"/>
+  </joint>
+
+  <joint name="Frame_L_wheel_joint" type="continuous">
+    <axis xyz="0 1 0"/>
+    <parent link="base_link"/>
+    <child link="L_wheel"/>
+    <origin xyz="0 0 0.0315"/>
+  </joint>
+
+  <joint name="Frame_Kinect_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="kinect"/>
+    <origin xyz="0.1575 0 0.48432"/>
+  </joint>
+  
+  <joint name="kinect_camera_rgb_optical_frame_joint" type="fixed">
+    <parent link="kinect"/>
+    <child link="camera_rgb_optical_frame"/>
+    <origin rpy="90 0 0"/>
+  </joint>
+
+  <joint name="Frame_IMU_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="IMU"/>
+    <origin xyz="0.13756 0.024499 0.064043"/>
+  </joint>
+  
+</robot>

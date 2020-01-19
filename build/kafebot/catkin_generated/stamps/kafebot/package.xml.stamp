@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<package>
+  <name>kafebot</name>
+  <version>0.0.0</version>
+  <description>Kafebot package</description>
+  <maintainer email="nguyennhuhuyhoang119@gmail.com">hoangham</maintainer>
+  <license>bubot</license>
+  <buildtool_depend>catkin</buildtool_depend>
+</package>

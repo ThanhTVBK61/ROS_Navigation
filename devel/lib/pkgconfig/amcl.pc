@@ -1,0 +1,8 @@
+prefix=/home/tranthanh/cafebot_ws/devel
+
+Name: amcl
+Description: Description of amcl
+Version: 1.14.4
+Cflags: -I/home/tranthanh/cafebot_ws/devel/include -I/home/tranthanh/cafebot_ws/src/amcl/include
+Libs: -L/home/tranthanh/cafebot_ws/devel/lib -lamcl_sensors -lamcl_map -lamcl_pf
+Requires: rosbag roscpp dynamic_reconfigure tf nav_msgs std_srvs

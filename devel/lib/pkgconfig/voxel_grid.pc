@@ -1,0 +1,8 @@
+prefix=/home/tranthanh/cafebot_ws/devel
+
+Name: voxel_grid
+Description: Description of voxel_grid
+Version: 1.14.4
+Cflags: -I/home/tranthanh/cafebot_ws/src/voxel_grid/include
+Libs: -L/home/tranthanh/cafebot_ws/devel/lib -lvoxel_grid
+Requires: roscpp

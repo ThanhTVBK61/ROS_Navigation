@@ -1,0 +1,6 @@
+<launch>
+	<group>
+		<node pkg="rviz" type="rviz" name="rviz" required="true"
+			args="-d $(find kafebot_navigation)/rviz/kafebot_navigation.rviz"/>
+	</group>
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/tranthanh/cafebot_ws/devel
+
+Name: hokuyo_node
+Description: Description of hokuyo_node
+Version: 1.7.8
+Cflags: -I/home/tranthanh/cafebot_ws/devel/include -I/home/tranthanh/cafebot_ws/src/hokuyo_node/include
+Libs: -L/home/tranthanh/cafebot_ws/devel/lib -llibhokuyo
+Requires: rosconsole
